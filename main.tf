@@ -20,13 +20,6 @@ data "aws_ami" "ubuntu" {
   }
 
   owners = ["099720109477"] # Canonical
-  
-  root_device_name = "/dev/xvda"
-
-  ebs_block_device {
-    device_name = "/dev/xvda"
-    volume_size = 4
-  }
 }
 
 resource "aws_instance" "netpology_fmarkov" {
